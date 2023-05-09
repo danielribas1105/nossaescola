@@ -1,0 +1,13 @@
+.class-form {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.class-form form {
+    width: 70%;
+    background-color: #f2f2f2;
+    border-radius: 1.5rem;
+    padding: 2rem 4rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
