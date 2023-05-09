@@ -1,19 +1,19 @@
-.text-field {
+.drop-down-list {
     margin: 1.5rem 0;
 }
 
-.text-field label {
+.drop-down-list label {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
 }
 
-.text-field input {
+.drop-down-list select {
     width: 100%;
     background-color: white;
     border: none;
     border-radius: 0.7rem;
-    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.1);
     font-size: 1.5rem;
     padding: 1.5rem;
     box-sizing: border-box;
