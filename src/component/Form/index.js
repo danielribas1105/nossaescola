@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import Button from '../Button';
 import DropDownList from '../DropDownList';
 import TextField from '../TextField';
 import './Form.css';
 
-const Form = () => {
+const Form = (props) => {
     const teams = [
         "Diretoria",
         "Coordenação",
@@ -23,20 +24,57 @@ const Form = () => {
         "Geografia"
     ];
 
+    const [nome, setNome] = useState("");
+    const [cargo, setCargo] = useState("");
+    const [imagem, setImagem] = useState("");
+    const [time, setTime] = useState("");
+    const [grupo, setGrupo] = useState("");
+
     const toSave = (event) => {
         event.preventDefault();
-        console.log("Salvar formulário!!!");
+        props.toColaboradorCadastrado({
+            nome, cargo, imagem, time, grupo
+        });
     }
 
     return (
         <section className="class-form">
             <form onSubmit={toSave}>
                 <h2>Preencha os dados do colaborador</h2>
-                <TextField obligation={true} label="Nome" placeholder="Digite o seu nome" />
-                <TextField obligation={true} label="Cargo" placeholder="Digite o seu cargo" />
-                <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
-                <DropDownList obligation={true} label="Times" itens={teams}/>
-                <DropDownList obligation={true} label="Grupos" itens={groups}/>
+                <TextField 
+                    obligation={true} 
+                    label="Nome" 
+                    placeholder="Digite o seu nome"
+                    fieldValue={nome}
+                    toAltered = {(valor) => setNome(valor)}
+                />
+                <TextField 
+                    obligation={true} 
+                    label="Cargo" 
+                    placeholder="Digite o seu cargo"
+                    fieldValue={cargo}
+                    toAltered = {(valor) => setCargo(valor)}
+                />
+                <TextField 
+                    label="Imagem" 
+                    placeholder="Digite o endereço da imagem"
+                    fieldValue={imagem}
+                    toAltered = {(valor) => setImagem(valor)}
+                />
+                <DropDownList 
+                    obligation={true} 
+                    label="Times" 
+                    itens={teams}
+                    fieldValue={time}
+                    toAltered = {(valor) => setTime(valor)}
+                />
+                <DropDownList 
+                    obligation={true} 
+                    label="Grupos" 
+                    itens={groups}
+                    fieldValue={grupo}
+                    toAltered = {(valor) => setGrupo(valor)}
+                />
                 <Button>
                     Criar Card
                 </Button>
