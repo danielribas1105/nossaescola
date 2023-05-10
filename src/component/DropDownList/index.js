@@ -10,6 +10,7 @@ const DropDownList = (props) => {
         <div className="drop-down-list">
             <label>{props.label}</label>
             <select value={props.fieldValue} onChange={toEntry} required={props.obligation}>
+                <option value=""></option>
                 {props.itens.map(item => <option key={item}>{item}</option>)};
             </select>
         </div>

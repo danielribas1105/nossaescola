@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './component/Banner';
 import Form from './component/Form';
 import Team from './component/Team';
+import Footer from './component/Footer';
 
 function App() {
 
@@ -34,22 +35,24 @@ function App() {
   ];
 
   const [colaboradores, setColaborador] = useState([]);
-
+  
   const toNewColaboradorAdicionado = (colaborador) => {
-    console.log("Colaborador New => ", colaborador);
     setColaborador([...colaboradores, colaborador]);
   }
 
   return (
     <div className="App">
       <Banner/>
-      <Form toColaboradorCadastrado={colaborador => toNewColaboradorAdicionado(colaborador)} 
+      <Form teams={teams.map(time => time.nome)} toColaboradorCadastrado={colaborador => toNewColaboradorAdicionado(colaborador)} 
       />
       {teams.map(time => <Team 
-                            key={time.nome} 
-                            nome={time.nome} 
-                            bgColor={time.corSecundaria}
-                            cardColor={time.corPrimaria} />)}
+        key={time.nome} 
+        nome={time.nome} 
+        bgColor={time.corSecundaria}
+        cardColor={time.corPrimaria} 
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      />)}
+      <Footer/>
     </div>
   );
 }

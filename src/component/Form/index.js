@@ -5,13 +5,7 @@ import TextField from '../TextField';
 import './Form.css';
 
 const Form = (props) => {
-    const teams = [
-        "Diretoria",
-        "Coordenação",
-        "Colaboradores",
-        "Fundamental I",
-        "Fundamental II"
-    ];
+    
     const groups = [
         "1º Ano",
         "2º Ano",
@@ -35,6 +29,9 @@ const Form = (props) => {
         props.toColaboradorCadastrado({
             nome, cargo, imagem, time, grupo
         });
+        setNome("");
+        setCargo("");
+        setImagem("");
     }
 
     return (
@@ -64,7 +61,7 @@ const Form = (props) => {
                 <DropDownList 
                     obligation={true} 
                     label="Times" 
-                    itens={teams}
+                    itens={props.teams}
                     fieldValue={time}
                     toAltered = {(valor) => setTime(valor)}
                 />
