@@ -7,15 +7,16 @@ import './Form.css';
 const Form = (props) => {
     
     const groups = [
-        "1º Ano",
-        "2º Ano",
-        "3º Ano",
-        "4º Ano",
-        "5º Ano",
+        "1º ao 5º ano",
+        "Artes",
+        "Ciências",
+        "Educação Física",
+        "Espanhol",
+        "Geografia",
+        "História",
+        "Inglês",
         "Matemática",
         "Português",
-        "História",
-        "Geografia"
     ];
 
     const [nome, setNome] = useState("");

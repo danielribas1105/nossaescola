@@ -3,6 +3,7 @@ import Banner from './component/Banner';
 import Form from './component/Form';
 import Team from './component/Team';
 import Footer from './component/Footer';
+import Main from './component/Main';
 
 function App() {
 
@@ -43,8 +44,7 @@ function App() {
   return (
     <div className="App">
       <Banner/>
-      <Form teams={teams.map(time => time.nome)} toColaboradorCadastrado={colaborador => toNewColaboradorAdicionado(colaborador)} 
-      />
+      <Main/>
       {teams.map(time => <Team 
         key={time.nome} 
         nome={time.nome} 
@@ -52,6 +52,8 @@ function App() {
         cardColor={time.corPrimaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
+      <Form teams={teams.map(time => time.nome)} toColaboradorCadastrado={colaborador => toNewColaboradorAdicionado(colaborador)} 
+      />
       <Footer/>
     </div>
   );
