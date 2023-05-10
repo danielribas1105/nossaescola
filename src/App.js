@@ -49,8 +49,7 @@ function App() {
                             key={time.nome} 
                             nome={time.nome} 
                             bgColor={time.corSecundaria}
-                            cardColor={time.corPrimaria}
-                          />)}
+                            cardColor={time.corPrimaria} />)}
     </div>
   );
 }
