@@ -5,19 +5,6 @@ import TextField from '../TextField';
 import './Form.css';
 
 const Form = (props) => {
-    
-    const groups = [
-        "1º ao 5º ano",
-        "Artes",
-        "Ciências",
-        "Educação Física",
-        "Espanhol",
-        "Geografia",
-        "História",
-        "Inglês",
-        "Matemática",
-        "Português",
-    ];
 
     const [nome, setNome] = useState("");
     const [cargo, setCargo] = useState("");
@@ -69,7 +56,7 @@ const Form = (props) => {
                 <DropDownList 
                     obligation={true} 
                     label="Grupos" 
-                    itens={groups}
+                    itens={props.groups}
                     fieldValue={grupo}
                     toAltered = {(valor) => setGrupo(valor)}
                 />

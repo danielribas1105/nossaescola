@@ -35,6 +35,20 @@ function App() {
     },
   ];
 
+  const groups = [
+    "Administrativo",
+    "1º ao 5º ano",
+    "Artes",
+    "Ciências",
+    "Educação Física",
+    "Espanhol",
+    "Geografia",
+    "História",
+    "Inglês",
+    "Matemática",
+    "Português",
+  ];
+
   const [colaboradores, setColaborador] = useState([]);
   
   const toNewColaboradorAdicionado = (colaborador) => {
@@ -52,7 +66,10 @@ function App() {
         cardColor={time.corPrimaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
-      <Form teams={teams.map(time => time.nome)} toColaboradorCadastrado={colaborador => toNewColaboradorAdicionado(colaborador)} 
+      <Form 
+        teams={teams.map(time => time.nome)}
+        groups={groups} 
+        toColaboradorCadastrado={colaborador => toNewColaboradorAdicionado(colaborador)} 
       />
       <Footer/>
     </div>
