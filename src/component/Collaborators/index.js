@@ -1,6 +1,9 @@
 import './Collaborators.css';
 
 const Collaborators = ({imagem, nome, cargo, grupo, cardColor}) => {
+    if(imagem === ""){
+        imagem = "/images/foto-padrão.jpg";
+    }
     return (
         <div className="colaborador">
             <div className="cabecalho" style={{backgroundColor: cardColor}}>
