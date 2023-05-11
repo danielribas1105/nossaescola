@@ -1,13 +1,14 @@
 .colaborador {
-    width: 280px;
+    width: 17rem;
 }
 
 .colaborador .cabecalho {
     background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
 }
+
 .colaborador img {
-    width: 120px;
+    width: 10rem;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
@@ -17,7 +18,7 @@
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 1rem;
+    padding-top: 3.5rem;
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;

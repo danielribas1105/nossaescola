@@ -8,7 +8,12 @@ const Form = (props) => {
 
     const groups = [
         "Administrativo",
-        "1º ao 5º ano",
+        "Pedagógico",
+        "1º Ano",
+        "2º Ano",
+        "3º Ano",
+        "4º Ano",
+        "5º Ano",
         "Artes",
         "Ciências",
         "Educação Física",

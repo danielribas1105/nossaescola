@@ -1,7 +1,8 @@
 .class-form {
     display: flex;
     justify-content: center;
-    margin: 5rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .class-form form {
