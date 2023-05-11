@@ -2,7 +2,6 @@ import Collaborators from '../Collaborators';
 import './Team.css';
 
 const Team = (props) => {
-    console.log(props.colaboradores);
     return (
         (props.colaboradores.length > 0) && <section className="time" style={{backgroundColor: props.bgColor}}>
             <h3 style={{borderColor: props.cardColor}}>{props.nome}</h3>
@@ -12,6 +11,7 @@ const Team = (props) => {
                     imagem={colaborador.imagem}
                     nome={colaborador.nome}
                     cargo={colaborador.cargo}
+                    grupo={colaborador.grupo}
                     cardColor={props.cardColor}
                 />)}
             </div> 
